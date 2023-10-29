@@ -58,8 +58,18 @@ public class InsertionSort {
 
         insertionSort.performSort();
 
-       int[] sortedArray = insertionSort.getSortedArray();
-       System.out.println("Array yang telah diurutkan: " + Arrays.toString(sortedArray));
+        int[] sortedArray = insertionSort.getSortedArray();
+        System.out.println("Array yang telah diurutkan: " + Arrays.toString(sortedArray));
+
+        //ini adalah fitur tambahan yang saya berikan
+        long startTime = System.nanoTime(); // Waktu awal
+
+        insertionSort.performSort();
+
+        long endTime = System.nanoTime(); // Waktu akhir
+
+        long executionTime = endTime - startTime;
+        System.out.println("Waktu eksekusi Insertion Sort: " + executionTime + " nanoseconds");
 
     }
 
